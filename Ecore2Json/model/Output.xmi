@@ -1,0 +1,3900 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:json="http://json/1.0">
+  <json:Object>
+    <key keyName="Name">
+      <content xsi:type="json:Value" value="PrimitiveTypes"/>
+    </key>
+    <key keyName="Data Types">
+      <content xsi:type="json:Array">
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Integer"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="PrimitiveTypes"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="String"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="PrimitiveTypes"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Boolean"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="PrimitiveTypes"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Double"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="PrimitiveTypes"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+        </content>
+      </content>
+    </key>
+  </json:Object>
+  <json:Object>
+    <key keyName="Name">
+      <content xsi:type="json:Value" value="Bugzilla"/>
+    </key>
+    <key keyName="Classes">
+      <content xsi:type="json:Array">
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="BugzillaRoot"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Attributes">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="version"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="urlbase"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="maintainer"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="exporter"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+            </content>
+          </key>
+          <key keyName="References">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bugs"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Opposite">
+                  <content xsi:type="json:Value" value="bug_bugzillaRoot"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Bug"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Attributes">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="error"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="ErrorType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="ErrorType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bug_id"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="exporter"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="urlbase"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bug_status"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="resolution"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="product"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="priority"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="version"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rep_platform"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="assigned_to"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="delta_ts"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="component"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="reporter"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="target_milestone"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bug_severity"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="creation_ts"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="qa_contact"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="status_whiteboard"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="op_sys"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bug_file_loc"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="short_desc"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+            </content>
+          </key>
+          <key keyName="References">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bug_bugzillaRoot"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Opposite">
+                  <content xsi:type="json:Value" value="bugs"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="BugzillaRoot"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="keywords"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Keywords"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="Keywords"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="dependson"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Dependson"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="Dependson"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="blocks"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Blocks"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="Blocks"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="cc"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Cc"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="Cc"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="long_desc"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="LongDesc"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="LongDesc"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="attachment"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="0"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="-1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Bug"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Containment">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Container">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Resolve Proxies">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Reference Type">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="StringElt"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Attributes">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="value"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="StringElt"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Keywords"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Super Types">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Value" value="StringElt"/>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Dependson"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Super Types">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Value" value="StringElt"/>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Blocks"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Super Types">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Value" value="StringElt"/>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Cc"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Super Types">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Value" value="StringElt"/>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="LongDesc"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Attributes">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="isPrivate"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="LongDesc"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="who"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="LongDesc"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="bug_when"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="LongDesc"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="thetext"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="LongDesc"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="Attachment"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Abstract">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Interface">
+            <content xsi:type="json:Value" value="false"/>
+          </key>
+          <key keyName="Attributes">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="isObsolete"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="isPatch"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="isPrivate"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="Boolean"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="id"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="date"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="desc"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="type"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="data"/>
+                </key>
+                <key keyName="Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="Unique">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Many">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Ordered">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Required">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Lower Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Upper Bound">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Containing Class">
+                  <content xsi:type="json:Value" value="Attachment"/>
+                </key>
+                <key keyName="Changeable">
+                  <content xsi:type="json:Value" value="true"/>
+                </key>
+                <key keyName="Derived">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Transient">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Unsettable">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Volatile">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+                <key keyName="Attribute Type">
+                  <content xsi:type="json:Value" value="String"/>
+                </key>
+                <key keyName="ID">
+                  <content xsi:type="json:Value" value="false"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+      </content>
+    </key>
+    <key keyName="Enums">
+      <content xsi:type="json:Array">
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="ErrorType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="et_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ErrorType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="et_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="et_NotFound"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ErrorType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="et_NotFound"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="et_NotPermitted"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ErrorType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="et_NotPermitted"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="et_InvalidBugId"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ErrorType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="et_InvalidBugId"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="SeverityType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_blocker"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_blocker"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_critical"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_critical"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_major"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_major"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_normal"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="5"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_normal"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_minor"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="6"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_minor"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_trivial"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="7"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_trivial"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_enhancement"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="SeverityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="8"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_enhancement"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="StatusType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_UNCONFIRMED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_UNCONFIRMED"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_NEW"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_NEW"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_ASSIGNED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_ASSIGNED"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_REOPENED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="5"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_REOPENED"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_RESOLVED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="6"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_RESOLVED"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_VERIFIED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="7"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_VERIFIED"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="st_CLOSED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="StatusType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="8"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="st_CLOSED"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="OperatingSystemType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_all"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_all"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows 3.1"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows 3.1"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows 95"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows 95"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows 98"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="5"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows 98"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows ME"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="6"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows ME"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows 2000"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="7"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows 2000"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows NT"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="8"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows NT"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows XP"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="9"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows XP"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows Vista"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="10"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows Vista"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Windows Server 2003"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="11"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Windows Server 2003"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 7"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="12"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 7"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 7.5"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="13"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 7.5"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 7.6.1"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="14"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 7.6.1"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 8.0"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="15"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 8.0"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 8.5"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="16"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 8.5"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 8.6"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="17"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 8.6"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_MacSystem 9.x"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="18"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_MacSystem 9.x"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.0"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="19"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.0"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.1"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="20"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.1"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.2"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="21"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.2"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.3"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="22"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Mac OS X 10.3"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Linux"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="23"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Linux"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_BDS/OS"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="24"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_BDS/OS"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_FreeBSD"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="25"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_FreeBSD"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_NetBSD"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="26"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_NetBSD"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_OpenBSD"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="27"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_OpenBSD"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_AIX"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="28"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_AIX"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_BeOS"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="29"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_BeOS"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_HP-UX"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="30"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_HP-UX"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_IRIX"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="31"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_IRIX"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Neutrino"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="32"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Neutrino"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_OpenVMS"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="33"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_OpenVMS"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_OS/2"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="34"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_OS/2"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_OSF/1"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="35"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_OSF/1"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_Solaris"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="36"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_Solaris"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_SunOS"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="37"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_SunOS"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="ost_other"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="OperatingSystemType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="38"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="ost_other"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="PriorityType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="pt_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="pt_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="pt_P1"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="pt_P1"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="pt_P2"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="pt_P2"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="pt_P3"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="pt_P3"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="pt_P4"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="5"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="pt_P4"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="pt_P5"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="PriorityType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="6"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="pt_P5"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="ReportedPlatformType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_all"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_all"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_DEC"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_DEC"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_HP"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_HP"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_Macintosh"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="5"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_Macintosh"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_PC"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="6"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_PC"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_SGI"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="7"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_SGI"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_Sun"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="8"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_Sun"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rpt_other"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ReportedPlatformType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="9"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rpt_other"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+        <content xsi:type="json:Object">
+          <key keyName="Name">
+            <content xsi:type="json:Value" value="ResolutionType"/>
+          </key>
+          <key keyName="Package">
+            <content xsi:type="json:Value" value="Bugzilla"/>
+          </key>
+          <key keyName="Serializable">
+            <content xsi:type="json:Value" value="true"/>
+          </key>
+          <key keyName="Literals">
+            <content xsi:type="json:Array">
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_null"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="1"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_null"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_FIXED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="2"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_FIXED"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_INVALID"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="3"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_INVALID"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_WONTFIX"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="4"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_WONTFIX"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_LATER"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="5"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_LATER"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_REMIND"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="6"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_REMIND"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_DUPLICATE"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="7"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_DUPLICATE"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_WORKSFORME"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="8"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_WORKSFORME"/>
+                </key>
+              </content>
+              <content xsi:type="json:Object">
+                <key keyName="Name">
+                  <content xsi:type="json:Value" value="rt_MOVED"/>
+                </key>
+                <key keyName="Enum">
+                  <content xsi:type="json:Value" value="ResolutionType"/>
+                </key>
+                <key keyName="Value">
+                  <content xsi:type="json:Value" value="9"/>
+                </key>
+                <key keyName="Literal">
+                  <content xsi:type="json:Value" value="rt_MOVED"/>
+                </key>
+              </content>
+            </content>
+          </key>
+        </content>
+      </content>
+    </key>
+  </json:Object>
+</xmi:XMI>
