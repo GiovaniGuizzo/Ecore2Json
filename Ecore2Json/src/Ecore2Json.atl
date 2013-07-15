@@ -5,17 +5,6 @@
 module Ecore2Json;
 create OUT: Json from IN: Ecore;
 
---- lazy rule CreateKey {
---- 	from
---- 		name: String,
---- 		valor: Json!Element
---- 	to
---- 		object: Json!Key (
---- 			keyName <- name,
---- 			content <- valor
---- 		)
---- }
-
 lazy rule CreateValue {
 	from
 		input: String
@@ -25,12 +14,109 @@ lazy rule CreateValue {
 		)
 }
 
-lazy rule CreateArray {
+--------------------- ModelElement ---------------------
+lazy rule EModelElementAnnotationsKey {
 	from
-		input: Sequence(Json!Element)
+		element: Ecore!EModelElement
 	to
-		object: Json!Array (
-			content <- input
+		object: Json!Key (
+			keyName <- 'Annotations',
+			content <- value
+		),
+		value: Json!Array (
+			content <- element.eAnnotations -> collect(e | thisModule ->
+					EAnnotation2Json(e)) -> flatten()
+		)
+}
+
+--------------------- Annotation ---------------------
+lazy rule EAnnotation2Json {
+	from
+		annotation: Ecore!EAnnotation
+	to
+		object: Json!Object (
+			keys <- Sequence{if not annotation.source -> oclIsUndefined() then
+						thisModule -> EAnnotationSourceKey(annotation)
+					else
+						OclUndefined
+					endif,
+						if annotation.details -> notEmpty() then
+						thisModule -> EAnnotationDetailsKey(annotation)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EAnnotationSourceKey {
+	from
+		annotation: Ecore!EAnnotation
+	to
+		object: Json!Key (
+			keyName <- 'Source',
+			content <- value
+		),
+		value: Json!Value (
+			value <- annotation.source
+		)
+}
+
+lazy rule EAnnotationDetailsKey {
+	from
+		annotation: Ecore!EAnnotation
+	to
+		object: Json!Key (
+			keyName <- 'Details',
+			content <- value
+		),
+		value: Json!Array (
+			value <- annotation.details -> collect(e | thisModule ->
+					EStringToStringMapEntry2Json(e)) -> flatten()
+		)
+}
+
+--------------------- StringToStringMapEntry ---------------------
+lazy rule EStringToStringMapEntry2Json {
+	from
+		entry: Ecore!EStringToStringMapEntry
+	to
+		object: Json!Object (
+			keys <- Sequence{if not entry.key -> oclIsUndefined() then
+						thisModule -> EStringToStringMapEntryKeyKey(entry)
+					else
+						OclUndefined
+					endif,
+						if not entry.value -> oclIsUndefined() then
+						thisModule -> EStringToStringMapEntryValueKey(entry)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EStringToStringMapEntryKeyKey {
+	from
+		entry: Ecore!EStringToStringMapEntry
+	to
+		object: Json!Key (
+			keyName <- 'Key',
+			content <- value
+		),
+		value: Json!Value (
+			value <- entry.key
+		)
+}
+
+lazy rule EStringToStringMapEntryValueKey {
+	from
+		entry: Ecore!EStringToStringMapEntry
+	to
+		object: Json!Key (
+			keyName <- 'Value',
+			content <- value
+		),
+		value: Json!Value (
+			value <- entry.value
 		)
 }
 
@@ -58,11 +144,50 @@ rule EPackage2Json {
 		)
 	to
 		object: Json!Object (
-			key <- Sequence{thisModule.ENamedElementNameKey(package),
-						thisModule.EPackageNsURIKey(package),
-						thisModule.EPackagePrefixKey(package),
-						thisModule.EPackageClassifiersKey(package),
-						thisModule.EPackageSubPackagesKey(package)}
+			key <- Sequence{if not package.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(package)
+					else
+						OclUndefined
+					endif,
+						if not package.nsURI -> oclIsUndefined() then
+						thisModule -> EPackageNsURIKey(package)
+					else
+						OclUndefined
+					endif,
+						if not package.nsPrefix -> oclIsUndefined() then
+						thisModule -> EPackagePrefixKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eClassifiers -> select(e | e.
+								oclIsTypeOf(Ecore!EClass)) -> flatten() -> notEmpty() then
+						thisModule -> EPackageClassesKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eClassifiers -> select(e | e.
+								oclIsTypeOf(Ecore!EDataType)) -> flatten() -> notEmpty()
+								then
+						thisModule -> EPackageDataTypesKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EEnum))
+								-> flatten() -> notEmpty() then
+						thisModule -> EPackageEnumsKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eSubpackages -> notEmpty() then
+						thisModule -> EPackageSubPackagesKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(package)
+					else
+						OclUndefined
+					endif}
 		)
 }
 
@@ -71,12 +196,55 @@ lazy rule EPackageSubPackage {
 		package: Ecore!EPackage
 	to
 		object: Json!Object (
-			key <- Sequence{thisModule.ENamedElementNameKey(package),
-						thisModule.EPackageSuperPackageKey(package),
-						thisModule.EPackageNsURIKey(package),
-						thisModule.EPackagePrefixKey(package),
-						thisModule.EPackageClassifiersKey(package),
-						thisModule.EPackageSubPackagesKey(package)}
+			key <- Sequence{if not package.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(package)
+					else
+						OclUndefined
+					endif,
+						if not package.eSuperPackage -> oclIsUndefined() then
+						thisModule -> EPackageSuperPackageKey(package)
+					else
+						OclUndefined
+					endif,
+						if not package.nsURI -> oclIsUndefined() then
+						thisModule -> EPackageNsURIKey(package)
+					else
+						OclUndefined
+					endif,
+						if not package.nsPrefix -> oclIsUndefined() then
+						thisModule -> EPackagePrefixKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eClassifiers -> select(e | e.
+								oclIsTypeOf(Ecore!EClass)) -> flatten() -> notEmpty() then
+						thisModule -> EPackageClassesKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eClassifiers -> select(e | e.
+								oclIsTypeOf(Ecore!EDataType)) -> flatten() -> notEmpty()
+								then
+						thisModule -> EPackageDataTypesKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EEnum))
+								-> flatten() -> notEmpty() then
+						thisModule -> EPackageEnumsKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eSubpackages -> notEmpty() then
+						thisModule -> EPackageSubPackagesKey(package)
+					else
+						OclUndefined
+					endif,
+						if package.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(package)
+					else
+						OclUndefined
+					endif}
 		)
 }
 
@@ -141,7 +309,7 @@ lazy rule EPackageSubPackagesKey {
 		)
 }
 
-lazy rule EPackageClassifiersKey {
+lazy rule EPackageClassesKey {
 	from
 		package: Ecore!EPackage (
 			not package.eClassifiers -> oclIsUndefined()
@@ -154,6 +322,38 @@ lazy rule EPackageClassifiersKey {
 		classifiersArray: Json!Array (
 			content <- package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EClass)) ->
 					collect(e | thisModule -> EClass2Json(e)) -> flatten()
+		)
+}
+
+lazy rule EPackageDataTypesKey {
+	from
+		package: Ecore!EPackage (
+			not package.eClassifiers -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Data Types',
+			content <- classifiersArray
+		),
+		classifiersArray: Json!Array (
+			content <- package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EDataType))
+					-> collect(e | thisModule -> EDataType2Json(e)) -> flatten()
+		)
+}
+
+lazy rule EPackageEnumsKey {
+	from
+		package: Ecore!EPackage (
+			not package.eClassifiers -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Enums',
+			content <- classifiersArray
+		),
+		classifiersArray: Json!Array (
+			content <- package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EEnum)) ->
+					collect(e | thisModule -> EEnum2Json(e)) -> flatten()
 		)
 }
 
@@ -209,13 +409,66 @@ lazy rule EClass2Json {
 		class: Ecore!EClass
 	to
 		object: Json!Object (
-			key <- Sequence{thisModule.ENamedElementNameKey(class),
-						thisModule.EClassifierPackageKey(class),
-						thisModule.EClassifierInstanceClassNameKey(class),
-						thisModule.EClassifierInstanceTypeNameKey(class),
-						thisModule.EClassAbstractKey(class),
-						thisModule.EClassInterfaceKey(class),
-						thisModule.EClassSuperTypesKey(class)}
+			key <- Sequence{if not class.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(class)
+					else
+						OclUndefined
+					endif,
+						if not class.ePackage -> oclIsUndefined() then
+						thisModule -> EClassifierPackageKey(class)
+					else
+						OclUndefined
+					endif,
+						if not class.instanceClassName -> oclIsUndefined() then
+						thisModule -> EClassifierInstanceClassNameKey(class)
+					else
+						OclUndefined
+					endif,
+						if not class.instanceTypeName -> oclIsUndefined() then
+						thisModule -> EClassifierInstanceTypeNameKey(class)
+					else
+						OclUndefined
+					endif,
+						if not class.abstract -> oclIsUndefined() then
+						thisModule -> EClassAbstractKey(class)
+					else
+						OclUndefined
+					endif,
+						if not class.interface -> oclIsUndefined() then
+						thisModule -> EClassInterfaceKey(class)
+					else
+						OclUndefined
+					endif,
+						if class.eSuperTypes -> notEmpty() then
+						thisModule -> EClassSuperTypesKey(class)
+					else
+						OclUndefined
+					endif,
+						if not class.eIDAttribute -> oclIsUndefined() then
+						thisModule -> EClassIDAttributeKey(class)
+					else
+						OclUndefined
+					endif,
+						if class.eAttributes -> notEmpty() then
+						thisModule -> EClassAttributesKey(class)
+					else
+						OclUndefined
+					endif,
+						if class.eOperations -> notEmpty() then
+						thisModule -> EClassOperationsKey(class)
+					else
+						OclUndefined
+					endif,
+						if class.eReferences -> notEmpty() then
+						thisModule -> EClassReferencesKey(class)
+					else
+						OclUndefined
+					endif,
+						if class.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(class)
+					else
+						OclUndefined
+					endif}
 		)
 }
 
@@ -268,7 +521,992 @@ lazy rule EClassSuperTypesKey {
 			content <- superTypesArray
 		),
 		superTypesArray: Json!Array (
-			content <- class.eSuperTypes -> collect(e | thisModule.CreateValue(e.name))
+			content <- class.eSuperTypes -> collect(e | thisModule -> CreateValue(e.
+					name)) -> flatten()
+		)
+}
+
+lazy rule EClassOperationsKey {
+	from
+		class: Ecore!EClass
+	to
+		object: Json!Key (
+			keyName <- 'Operations',
+			content <- value
+		),
+		value: Json!Array (
+			content <- class.eOperations -> collect(e | thisModule.EOperation2Json(e)) ->
+					flatten()
+		)
+}
+
+lazy rule EClassIDAttributeKey {
+	from
+		class: Ecore!EClass (
+			not class.eIDAttribute -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Attribute ID',
+			content <- value
+		),
+		value: Json!Value (
+			value <- class.eIDAttribute.name
+		)
+}
+
+lazy rule EClassAttributesKey {
+	from
+		class: Ecore!EClass
+	to
+		object: Json!Key (
+			keyName <- 'Attributes',
+			content <- value
+		),
+		value: Json!Array (
+			content <- class.eAttributes -> collect(e | thisModule -> EAttribute2Json(e))
+					-> flatten()
+		)
+}
+
+lazy rule EClassReferencesKey {
+	from
+		class: Ecore!EClass
+	to
+		object: Json!Key (
+			keyName <- 'References',
+			content <- value
+		),
+		value: Json!Array (
+			content <- class.eReferences -> collect(e | thisModule -> EReference2Json(e))
+					-> flatten()
+		)
+}
+
+--------------------- Data Type ---------------------
+lazy rule EDataType2Json {
+	from
+		dataType: Ecore!EDataType
+	to
+		object: Json!Object (
+			key <- Sequence{if not dataType.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(dataType)
+					else
+						OclUndefined
+					endif,
+						if not dataType.ePackage -> oclIsUndefined() then
+						thisModule -> EClassifierPackageKey(dataType)
+					else
+						OclUndefined
+					endif,
+						if not dataType.instanceClassName -> oclIsUndefined() then
+						thisModule -> EClassifierInstanceClassNameKey(dataType)
+					else
+						OclUndefined
+					endif,
+						if not dataType.instanceTypeName -> oclIsUndefined() then
+						thisModule -> EClassifierInstanceTypeNameKey(dataType)
+					else
+						OclUndefined
+					endif,
+						if not dataType.serializable -> oclIsUndefined() then
+						thisModule -> EDataTypeSerializableKey(dataType)
+					else
+						OclUndefined
+					endif,
+						if dataType.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(dataType)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EDataTypeSerializableKey {
+	from
+		dataType: Ecore!EDataType
+	to
+		object: Json!Key (
+			keyName <- 'Serializable',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if dataType.serializable then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+--------------------- Enum ---------------------
+lazy rule EEnum2Json {
+	from
+		enum: Ecore!EEnum
+	to
+		object: Json!Object (
+			key <- Sequence{if not enum.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(enum)
+					else
+						OclUndefined
+					endif,
+						if not enum.ePackage -> oclIsUndefined() then
+						thisModule -> EClassifierPackageKey(enum)
+					else
+						OclUndefined
+					endif,
+						if not enum.instanceClassName -> oclIsUndefined() then
+						thisModule -> EClassifierInstanceClassNameKey(enum)
+					else
+						OclUndefined
+					endif,
+						if not enum.instanceTypeName -> oclIsUndefined() then
+						thisModule -> EClassifierInstanceTypeNameKey(enum)
+					else
+						OclUndefined
+					endif,
+						if not enum.serializable -> oclIsUndefined() then
+						thisModule -> EDataTypeSerializableKey(enum)
+					else
+						OclUndefined
+					endif,
+						if enum.eLiterals -> notEmpty() then
+						thisModule -> EEnumLiteralsKey(enum)
+					else
+						OclUndefined
+					endif,
+						if enum.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(enum)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EEnumLiteralsKey {
+	from
+		enum: Ecore!EEnum
+	to
+		object: Json!Key (
+			keyName <- 'Literals',
+			content <- value
+		),
+		value: Json!Array (
+			content <- enum.eLiterals -> collect(e | thisModule -> EEnumLiteral2Json(e))
+					-> flatten()
+		)
+}
+
+--------------------- EnumLiteral ---------------------
+lazy rule EEnumLiteral2Json {
+	from
+		literal: Ecore!EEnumLiteral
+	to
+		object: Json!Object (
+			key <- Sequence{if not literal.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(literal)
+					else
+						OclUndefined
+					endif,
+						if not literal.eEnum -> oclIsUndefined() then
+						thisModule -> EEnumLiteralEnumKey(literal)
+					else
+						OclUndefined
+					endif,
+						if not literal.value -> oclIsUndefined() then
+						thisModule -> EEnumLiteralValueKey(literal)
+					else
+						OclUndefined
+					endif,
+						if not literal.literal -> oclIsUndefined() then
+						thisModule -> EEnumLiteralLiteralKey(literal)
+					else
+						OclUndefined
+					endif,
+						if literal.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(literal)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EEnumLiteralEnumKey {
+	from
+		literal: Ecore!EEnumLiteral
+	to
+		object: Json!Key (
+			keyName <- 'Enum',
+			content <- value
+		),
+		value: Json!Value (
+			value <- literal.eEnum.name
+		)
+}
+
+lazy rule EEnumLiteralValueKey {
+	from
+		literal: Ecore!EEnumLiteral
+	to
+		object: Json!Key (
+			keyName <- 'Value',
+			content <- value
+		),
+		value: Json!Value (
+			value <- literal.value.toString()
+		)
+}
+
+lazy rule EEnumLiteralLiteralKey {
+	from
+		literal: Ecore!EEnumLiteral
+	to
+		object: Json!Key (
+			keyName <- 'Literal',
+			content <- value
+		),
+		value: Json!Value (
+			value <- literal.literal
+		)
+}
+
+--------------------- TypedElement ---------------------
+lazy rule ETypedElementTypeKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Type',
+			content <- value
+		),
+		value: Json!Value (
+			value <- element.eType.name
+		)
+}
+
+lazy rule ETypedElementOrderedKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Ordered',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if element.ordered then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule ETypedElementUniqueKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Unique',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if element.unique then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule ETypedElementLowerBoundKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Lower Bound',
+			content <- value
+		),
+		value: Json!Value (
+			value <- element.lowerBound.toString()
+		)
+}
+
+lazy rule ETypedElementUpperBoundKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Upper Bound',
+			content <- value
+		),
+		value: Json!Value (
+			value <- element.upperBound.toString()
+		)
+}
+
+lazy rule ETypedElementManyKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Many',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if element.many then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule ETypedElementRequiredKey {
+	from
+		element: Ecore!ETypedElement
+	to
+		object: Json!Key (
+			keyName <- 'Required',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if element.required then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+--------------------- Parameter ---------------------
+lazy rule EParameter2Json {
+	from
+		parameter: Ecore!EParameter
+	to
+		object: Json!Object (
+			key <- Sequence{if not parameter.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.eType -> oclIsUndefined() then
+						thisModule -> ETypedElementTypeKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.unique -> oclIsUndefined() then
+						thisModule -> ETypedElementUniqueKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.many -> oclIsUndefined() then
+						thisModule -> ETypedElementManyKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.ordered -> oclIsUndefined() then
+						thisModule -> ETypedElementOrderedKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.required -> oclIsUndefined() then
+						thisModule -> ETypedElementRequiredKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.lowerBound -> oclIsUndefined() then
+						thisModule -> ETypedElementLowerBoundKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.upperBound -> oclIsUndefined() then
+						thisModule -> ETypedElementUpperBoundKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if not parameter.eOperation -> oclIsUndefined() then
+						thisModule -> EParameterOperationKey(parameter)
+					else
+						OclUndefined
+					endif,
+						if parameter.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(parameter)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EParameterOperationKey {
+	from
+		parameter: Ecore!EParameter
+	to
+		object: Json!Key (
+			keyName <- 'Operation',
+			content <- value
+		),
+		value: Json!Value (
+			value <- parameter.eOperation.name
+		)
+}
+
+--------------------- Operation ---------------------
+lazy rule EOperation2Json {
+	from
+		operation: Ecore!EOperation
+	to
+		object: Json!Object (
+			key <- Sequence{if not operation.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.eType -> oclIsUndefined() then
+						thisModule -> ETypedElementTypeKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.unique -> oclIsUndefined() then
+						thisModule -> ETypedElementUniqueKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.many -> oclIsUndefined() then
+						thisModule -> ETypedElementManyKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.ordered -> oclIsUndefined() then
+						thisModule -> ETypedElementOrderedKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.required -> oclIsUndefined() then
+						thisModule -> ETypedElementRequiredKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.lowerBound -> oclIsUndefined() then
+						thisModule -> ETypedElementLowerBoundKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.upperBound -> oclIsUndefined() then
+						thisModule -> ETypedElementUpperBoundKey(operation)
+					else
+						OclUndefined
+					endif,
+						if operation.eExceptions -> notEmpty() then
+						thisModule -> EOperationExceptionsKey(operation)
+					else
+						OclUndefined
+					endif,
+						if not operation.eContainingClass -> oclIsUndefined() then
+						thisModule -> EOperationContainingClassKey(operation)
+					else
+						OclUndefined
+					endif,
+						if operation.eParameters -> notEmpty() then
+						thisModule -> EOperationParametersKey(operation)
+					else
+						OclUndefined
+					endif,
+						if operation.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(operation)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EOperationContainingClassKey {
+	from
+		operation: Ecore!EOperation
+	to
+		object: Json!Key (
+			keyName <- 'Containing Class',
+			content <- value
+		),
+		value: Json!Value (
+			value <- operation.eContainingClass.name
+		)
+}
+
+lazy rule EOperationExceptionsKey {
+	from
+		operation: Ecore!EOperation
+	to
+		object: Json!Key (
+			keyName <- 'Exceptions',
+			content <- value
+		),
+		value: Json!Array (
+			content <- operation.eExceptions -> collect(e | thisModule.CreateValue(e.
+					name)) -> flatten()
+		)
+}
+
+lazy rule EOperationParametersKey {
+	from
+		operation: Ecore!EOperation
+	to
+		object: Json!Key (
+			keyName <- 'Parameters',
+			content <- value
+		),
+		value: Json!Array (
+			content <- operation.eParameters -> collect(e | thisModule.
+					EParameter2Json(e)) -> flatten()
+		)
+}
+
+--------------------- StructuralFeature ---------------------
+lazy rule EStructuralFeatureContainingClassKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Containing Class',
+			content <- value
+		),
+		value: Json!Value (
+			value <- feature.eContainingClass.name
+		)
+}
+
+lazy rule EStructuralFeatureDefaultValueLiteralKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Default Value Literal',
+			content <- value
+		),
+		value: Json!Value (
+			value <- feature.defaultValueLiteral
+		)
+}
+
+lazy rule EStructuralFeatureChangeableKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Changeable',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if feature.changeable then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EStructuralFeatureVloatileKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Volatile',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if feature.volatile then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EStructuralFeatureTransientKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Transient',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if feature.transient then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EStructuralFeatureUnsettableKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Unsettable',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if feature.unsettable then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EStructuralFeatureDerivedKey {
+	from
+		feature: Ecore!EStructuralFeature
+	to
+		object: Json!Key (
+			keyName <- 'Derived',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if feature.derived then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+--------------------- Attribute ---------------------
+lazy rule EAttribute2Json {
+	from
+		attribute: Ecore!EAttribute
+	to
+		object: Json!Object (
+			key <- Sequence{if not attribute.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.eType -> oclIsUndefined() then
+						thisModule -> ETypedElementTypeKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.unique -> oclIsUndefined() then
+						thisModule -> ETypedElementUniqueKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.many -> oclIsUndefined() then
+						thisModule -> ETypedElementManyKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.ordered -> oclIsUndefined() then
+						thisModule -> ETypedElementOrderedKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.required -> oclIsUndefined() then
+						thisModule -> ETypedElementRequiredKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.lowerBound -> oclIsUndefined() then
+						thisModule -> ETypedElementLowerBoundKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.upperBound -> oclIsUndefined() then
+						thisModule -> ETypedElementUpperBoundKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.eContainingClass -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureContainingClassKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.defaultValueLiteral -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureDefaultValueLiteralKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.changeable -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureChangeableKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.derived -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureDerivedKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.transient -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureTransientKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.unsettable -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureUnsettableKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.volatile -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureVloatileKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.eAttributeType -> oclIsUndefined() then
+						thisModule -> EAttributeTypeKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if not attribute.iD -> oclIsUndefined() then
+						thisModule -> EAttributeIdKey(attribute)
+					else
+						OclUndefined
+					endif,
+						if attribute.eAnnotations -> oclIsUndefined() then
+						thisModule -> EModelElementAnnotationsKey(attribute)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EAttributeTypeKey {
+	from
+		attribute: Ecore!EAttribute
+	to
+		object: Json!Key (
+			keyName <- 'Attribute Type',
+			content <- value
+		),
+		value: Json!Value (
+			value <- attribute.eAttributeType.name
+		)
+}
+
+lazy rule EAttributeIdKey {
+	from
+		attribute: Ecore!EAttribute
+	to
+		object: Json!Key (
+			keyName <- 'ID',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if attribute.iD then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+--------------------- Reference ---------------------
+lazy rule EReference2Json {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Object (
+			key <- Sequence{if not reference.name -> oclIsUndefined() then
+						thisModule -> ENamedElementNameKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.eType -> oclIsUndefined() then
+						thisModule -> ETypedElementTypeKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.unique -> oclIsUndefined() then
+						thisModule -> ETypedElementUniqueKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.many -> oclIsUndefined() then
+						thisModule -> ETypedElementManyKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.ordered -> oclIsUndefined() then
+						thisModule -> ETypedElementOrderedKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.required -> oclIsUndefined() then
+						thisModule -> ETypedElementRequiredKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.lowerBound -> oclIsUndefined() then
+						thisModule -> ETypedElementLowerBoundKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.upperBound -> oclIsUndefined() then
+						thisModule -> ETypedElementUpperBoundKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.eContainingClass -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureContainingClassKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.defaultValueLiteral -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureDefaultValueLiteralKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.changeable -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureChangeableKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.derived -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureDerivedKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.transient -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureTransientKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.unsettable -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureUnsettableKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.volatile -> oclIsUndefined() then
+						thisModule -> EStructuralFeatureVloatileKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.eOpposite -> oclIsUndefined() then
+						thisModule -> EReferenceOppositeKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.containment -> oclIsUndefined() then
+						thisModule -> EReferenceContainmentKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.container -> oclIsUndefined() then
+						thisModule -> EReferenceContainerKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.resolveProxies -> oclIsUndefined() then
+						thisModule -> EReferenceResolveProxiesKey(reference)
+					else
+						OclUndefined
+					endif,
+						if not reference.eReferenceType -> oclIsUndefined() then
+						thisModule -> EReferenceTypeKey(reference)
+					else
+						OclUndefined
+					endif,
+						if reference.eKeys -> notEmpty() then
+						thisModule -> EReferenceKeysKey(reference)
+					else
+						OclUndefined
+					endif,
+						if reference.eAnnotations -> notEmpty() then
+						thisModule -> EModelElementAnnotationsKey(reference)
+					else
+						OclUndefined
+					endif}
+		)
+}
+
+lazy rule EReferenceContainmentKey {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Key (
+			keyName <- 'Containment',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if reference.containment then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EReferenceContainerKey {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Key (
+			keyName <- 'Container',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if reference.container then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EReferenceResolveProxiesKey {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Key (
+			keyName <- 'Resolve Proxies',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if reference.resolveProxies then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EReferenceOppositeKey {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Key (
+			keyName <- 'Opposite',
+			content <- value
+		),
+		value: Json!Value (
+			value <- reference.eOpposite.name
+		)
+}
+
+lazy rule EReferenceTypeKey {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Key (
+			keyName <- 'Reference Type',
+			content <- value
+		),
+		value: Json!Value (
+			value <- reference.eReferenceType.name
+		)
+}
+
+lazy rule EReferenceKeysKey {
+	from
+		reference: Ecore!EReference
+	to
+		object: Json!Key (
+			keyName <- 'Keys',
+			content <- value
+		),
+		value: Json!Array (
+			content <- reference.eKeys -> collect(e | thisModule -> CreateValue(e.name))
 					-> flatten()
 		)
 }

@@ -6,6 +6,10 @@
       <children xmi:type="notation:Node" xmi:id="_djd1IOzDEeK198z-jrFL9g" type="2003">
         <children xmi:type="notation:Node" xmi:id="_djecMOzDEeK198z-jrFL9g" type="4002"/>
         <children xmi:type="notation:Node" xmi:id="_djfDQOzDEeK198z-jrFL9g" type="5004">
+          <children xmi:type="notation:Node" xmi:id="_GSuw8O1wEeKyTqOPjwTsIQ" type="2001">
+            <element xmi:type="ecore:EAttribute" href="InputTest.ecore#//AnotherPackage/TesteDeClasse/EAttribute0"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_GSuw8e1wEeKyTqOPjwTsIQ"/>
+          </children>
           <styles xmi:type="notation:DrawerStyle" xmi:id="_djfDQezDEeK198z-jrFL9g"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_djfDQuzDEeK198z-jrFL9g"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_djfDQ-zDEeK198z-jrFL9g"/>
