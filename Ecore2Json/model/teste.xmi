@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<json:Object xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:json="http://json/1.0">
+  <key keyName="Name">
+    <content xsi:type="json:Value" value="RootPackage"/>
+  </key>
+  <key keyName="nsURI">
+    <content xsi:type="json:Value" value="http://RootPackage/1.0"/>
+  </key>
+  <key keyName="nsPrefix">
+    <content xsi:type="json:Value" value="RootPackage"/>
+  </key>
+  <key keyName="Classes">
+    <content xsi:type="json:Array"/>
+  </key>
+  <key keyName="Sub Packages">
+    <content xsi:type="json:Array">
+      <content xsi:type="json:Object">
+        <key keyName="Name">
+          <content xsi:type="json:Value" value="AnotherPackage"/>
+        </key>
+        <key keyName="Super Package">
+          <content xsi:type="json:Value" value="RootPackage"/>
+        </key>
+        <key keyName="nsURI">
+          <content xsi:type="json:Value"/>
+        </key>
+        <key keyName="nsPrefix">
+          <content xsi:type="json:Value"/>
+        </key>
+        <key keyName="Classes">
+          <content xsi:type="json:Array">
+            <content xsi:type="json:Object">
+              <key keyName="Name">
+                <content xsi:type="json:Value" value="TesteDeClasse"/>
+              </key>
+              <key keyName="Package">
+                <content xsi:type="json:Value" value="AnotherPackage"/>
+              </key>
+              <key keyName="Instance Class Name">
+                <content xsi:type="json:Value"/>
+              </key>
+              <key keyName="Instance Type Name">
+                <content xsi:type="json:Value"/>
+              </key>
+              <key keyName="Interface">
+                <content xsi:type="json:Value" value="false"/>
+              </key>
+              <key keyName="Abstract">
+                <content xsi:type="json:Value" value="false"/>
+              </key>
+              <key keyName="Super Types">
+                <content xsi:type="json:Array"/>
+              </key>
+            </content>
+            <content xsi:type="json:Object">
+              <key keyName="Name">
+                <content xsi:type="json:Value" value="EClass0"/>
+              </key>
+              <key keyName="Package">
+                <content xsi:type="json:Value" value="AnotherPackage"/>
+              </key>
+              <key keyName="Instance Class Name">
+                <content xsi:type="json:Value" value="java.lang.Object"/>
+              </key>
+              <key keyName="Instance Type Name">
+                <content xsi:type="json:Value" value="EClass0"/>
+              </key>
+              <key keyName="Interface">
+                <content xsi:type="json:Value" value="false"/>
+              </key>
+              <key keyName="Abstract">
+                <content xsi:type="json:Value" value="false"/>
+              </key>
+              <key keyName="Super Types">
+                <content xsi:type="json:Array">
+                  <content xsi:type="json:Value" value="TesteDeClasse"/>
+                </content>
+              </key>
+            </content>
+          </content>
+        </key>
+        <key keyName="Sub Packages">
+          <content xsi:type="json:Array">
+            <content xsi:type="json:Object">
+              <key keyName="Name">
+                <content xsi:type="json:Value" value="SubPackage"/>
+              </key>
+              <key keyName="Super Package">
+                <content xsi:type="json:Value" value="AnotherPackage"/>
+              </key>
+              <key keyName="nsURI">
+                <content xsi:type="json:Value"/>
+              </key>
+              <key keyName="nsPrefix">
+                <content xsi:type="json:Value"/>
+              </key>
+              <key keyName="Classes">
+                <content xsi:type="json:Array"/>
+              </key>
+              <key keyName="Sub Packages">
+                <content xsi:type="json:Array"/>
+              </key>
+            </content>
+            <content xsi:type="json:Object">
+              <key keyName="Name">
+                <content xsi:type="json:Value" value="SubPackage2"/>
+              </key>
+              <key keyName="Super Package">
+                <content xsi:type="json:Value" value="AnotherPackage"/>
+              </key>
+              <key keyName="nsURI">
+                <content xsi:type="json:Value"/>
+              </key>
+              <key keyName="nsPrefix">
+                <content xsi:type="json:Value"/>
+              </key>
+              <key keyName="Classes">
+                <content xsi:type="json:Array"/>
+              </key>
+              <key keyName="Sub Packages">
+                <content xsi:type="json:Array"/>
+              </key>
+            </content>
+          </content>
+        </key>
+      </content>
+    </content>
+  </key>
+</json:Object>

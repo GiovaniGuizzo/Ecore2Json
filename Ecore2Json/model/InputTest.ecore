@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RootPackage" nsURI="http://RootPackage/1.0" nsPrefix="RootPackage">
+  <eSubpackages name="AnotherPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="TesteDeClasse">
+      <eOperations name="vaiVaiVai" eType="#//AnotherPackage/TesteDeClasse">
+        <eParameters name="vaivaivai" eType="#//AnotherPackage/TesteDeClasse"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//AnotherPackage/EClass0"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EClass0" instanceTypeName="EClass0"
+        eSuperTypes="#//AnotherPackage/TesteDeClasse"/>
+    <eSubpackages name="SubPackage"/>
+    <eSubpackages name="SubPackage2"/>
+  </eSubpackages>
+</ecore:EPackage>

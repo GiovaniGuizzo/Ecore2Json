@@ -1,0 +1,274 @@
+-- @path Json=/Ecore2Json/model/json.ecore
+-- @nsURI Ecore=http://www.eclipse.org/emf/2002/Ecore
+
+
+module Ecore2Json;
+create OUT: Json from IN: Ecore;
+
+--- lazy rule CreateKey {
+--- 	from
+--- 		name: String,
+--- 		valor: Json!Element
+--- 	to
+--- 		object: Json!Key (
+--- 			keyName <- name,
+--- 			content <- valor
+--- 		)
+--- }
+
+lazy rule CreateValue {
+	from
+		input: String
+	to
+		object: Json!Value (
+			value <- input
+		)
+}
+
+lazy rule CreateArray {
+	from
+		input: Sequence(Json!Element)
+	to
+		object: Json!Array (
+			content <- input
+		)
+}
+
+--------------------- NamedElement ---------------------
+lazy rule ENamedElementNameKey {
+	from
+		namedElement: Ecore!ENamedElement (
+			not namedElement.name -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Name',
+			content <- value
+		),
+		value: Json!Value (
+			value <- namedElement.name
+		)
+}
+
+--------------------- Package ---------------------
+rule EPackage2Json {
+	from
+		package: Ecore!EPackage (
+			package.eSuperPackage -> oclIsUndefined()
+		)
+	to
+		object: Json!Object (
+			key <- Sequence{thisModule.ENamedElementNameKey(package),
+						thisModule.EPackageNsURIKey(package),
+						thisModule.EPackagePrefixKey(package),
+						thisModule.EPackageClassifiersKey(package),
+						thisModule.EPackageSubPackagesKey(package)}
+		)
+}
+
+lazy rule EPackageSubPackage {
+	from
+		package: Ecore!EPackage
+	to
+		object: Json!Object (
+			key <- Sequence{thisModule.ENamedElementNameKey(package),
+						thisModule.EPackageSuperPackageKey(package),
+						thisModule.EPackageNsURIKey(package),
+						thisModule.EPackagePrefixKey(package),
+						thisModule.EPackageClassifiersKey(package),
+						thisModule.EPackageSubPackagesKey(package)}
+		)
+}
+
+lazy rule EPackageNsURIKey {
+	from
+		package: Ecore!EPackage (
+			false
+		)
+	to
+		object: Json!Key (
+			keyName <- 'nsURI',
+			content <- value
+		),
+		value: Json!Value (
+			value <- package.nsURI
+		)
+}
+
+lazy rule EPackagePrefixKey {
+	from
+		package: Ecore!EPackage (
+			not package.nsPrefix -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'nsPrefix',
+			content <- value
+		),
+		value: Json!Value (
+			value <- package.nsPrefix
+		)
+}
+
+lazy rule EPackageSuperPackageKey {
+	from
+		package: Ecore!EPackage (
+			not package.eSuperPackage -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Super Package',
+			content <- value
+		),
+		value: Json!Value (
+			value <- package.eSuperPackage.name
+		)
+}
+
+lazy rule EPackageSubPackagesKey {
+	from
+		package: Ecore!EPackage (
+			not package.eSubpackages -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Sub Packages',
+			content <- subPackagesArray
+		),
+		subPackagesArray: Json!Array (
+			content <- package.eSubpackages -> collect(e | thisModule ->
+					EPackageSubPackage(e)) -> flatten()
+		)
+}
+
+lazy rule EPackageClassifiersKey {
+	from
+		package: Ecore!EPackage (
+			not package.eClassifiers -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Classes',
+			content <- classifiersArray
+		),
+		classifiersArray: Json!Array (
+			content <- package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EClass)) ->
+					collect(e | thisModule -> EClass2Json(e)) -> flatten()
+		)
+}
+
+--------------------- Classifier ---------------------
+lazy rule EClassifierInstanceClassNameKey {
+	from
+		classifier: Ecore!EClassifier (
+			not classifier.instanceClassName -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Instance Class Name',
+			content <- value
+		),
+		value: Json!Value (
+			value <- classifier.instanceClassName
+		)
+}
+
+lazy rule EClassifierPackageKey {
+	from
+		classifier: Ecore!EClassifier (
+			not classifier.ePackage -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Package',
+			content <- value
+		),
+		value: Json!Value (
+			value <- classifier.ePackage.name
+		)
+}
+
+lazy rule EClassifierInstanceTypeNameKey {
+	from
+		classifier: Ecore!EClassifier (
+			not classifier.instanceTypeName -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Instance Type Name',
+			content <- value
+		),
+		value: Json!Value (
+			value <- classifier.instanceTypeName
+		)
+}
+
+--------------------- Class ---------------------
+lazy rule EClass2Json {
+	from
+		class: Ecore!EClass
+	to
+		object: Json!Object (
+			key <- Sequence{thisModule.ENamedElementNameKey(class),
+						thisModule.EClassifierPackageKey(class),
+						thisModule.EClassifierInstanceClassNameKey(class),
+						thisModule.EClassifierInstanceTypeNameKey(class),
+						thisModule.EClassAbstractKey(class),
+						thisModule.EClassInterfaceKey(class),
+						thisModule.EClassSuperTypesKey(class)}
+		)
+}
+
+lazy rule EClassAbstractKey {
+	from
+		class: Ecore!EClass (
+			not class.abstract -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Abstract',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if class.abstract then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EClassInterfaceKey {
+	from
+		class: Ecore!EClass (
+			not class.interface -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Interface',
+			content <- value
+		),
+		value: Json!Value (
+			value <- if class.interface then
+					'true'
+				else
+					'false'
+				endif
+		)
+}
+
+lazy rule EClassSuperTypesKey {
+	from
+		class: Ecore!EClass (
+			not class.eSuperTypes -> oclIsUndefined()
+		)
+	to
+		object: Json!Key (
+			keyName <- 'Super Types',
+			content <- superTypesArray
+		),
+		superTypesArray: Json!Array (
+			content <- class.eSuperTypes -> collect(e | thisModule.CreateValue(e.name))
+					-> flatten()
+		)
+}

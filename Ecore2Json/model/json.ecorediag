@@ -99,7 +99,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_9YqeUesREeKaRId0HO-wVw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_9YqeUusREeKaRId0HO-wVw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="json.ecore#//Object/keys"/>
+    <element xmi:type="ecore:EReference" href="json.ecore#//Object/key"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9YqeU-sREeKaRId0HO-wVw" points="[0, 0, 79, 60]$[-79, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9Z0U4usREeKaRId0HO-wVw" id="(0.058823529411764705,0.047619047619047616)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9Z078OsREeKaRId0HO-wVw" id="(0.4957983193277311,1.0)"/>
