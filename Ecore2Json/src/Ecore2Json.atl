@@ -1,9 +1,25 @@
--- @path Json=/Ecore2Json/model/json.ecore
+-- @path Json=/Ecore2Json/src/json.ecore
 -- @nsURI Ecore=http://www.eclipse.org/emf/2002/Ecore
 
 
 module Ecore2Json;
 create OUT: Json from IN: Ecore;
+
+helper context Json!Object def: rootElement: Json!Object =
+	OclUndefined;
+
+entrypoint rule ECore2Json() {
+	to
+		object: Json!Object (
+			key <- Sequence{thisModule -> CreateKey('Nome', thisModule ->
+					CreateValue('Root Element')),
+						thisModule -> CreateKey('Pacotes', thisModule ->
+								CreateRootArray(''))}
+		)
+	do{
+			thisModule.rootElement <- object;
+			}
+}
 
 lazy rule CreateValue {
 	from
@@ -11,6 +27,28 @@ lazy rule CreateValue {
 	to
 		object: Json!Value (
 			value <- input
+		)
+}
+
+lazy rule CreateKey {
+	from
+		name: String,
+		conteudo: Json!Value
+	to
+		object: Json!Key (
+			keyName <- name,
+			content <- conteudo
+		)
+}
+
+lazy rule CreateRootArray {
+	from
+		input: String
+	to
+		object: Json!Array (
+			content <- Ecore!EPackage -> allInstancesFrom('IN') -> select(e | e.
+					eSuperPackage -> oclIsUndefined()) -> collect(e | thisModule ->
+					EPackage2Json(e)) -> flatten()
 		)
 }
 
@@ -35,7 +73,7 @@ lazy rule EAnnotation2Json {
 		annotation: Ecore!EAnnotation
 	to
 		object: Json!Object (
-			keys <- Sequence{if not annotation.source -> oclIsUndefined() then
+			key <- Sequence{if not annotation.source -> oclIsUndefined() then
 						thisModule -> EAnnotationSourceKey(annotation)
 					else
 						OclUndefined
@@ -70,7 +108,7 @@ lazy rule EAnnotationDetailsKey {
 			content <- value
 		),
 		value: Json!Array (
-			value <- annotation.details -> collect(e | thisModule ->
+			content <- annotation.details -> collect(e | thisModule ->
 					EStringToStringMapEntry2Json(e)) -> flatten()
 		)
 }
@@ -81,7 +119,7 @@ lazy rule EStringToStringMapEntry2Json {
 		entry: Ecore!EStringToStringMapEntry
 	to
 		object: Json!Object (
-			keys <- Sequence{if not entry.key -> oclIsUndefined() then
+			key <- Sequence{if not entry.key -> oclIsUndefined() then
 						thisModule -> EStringToStringMapEntryKeyKey(entry)
 					else
 						OclUndefined
@@ -137,61 +175,7 @@ lazy rule ENamedElementNameKey {
 }
 
 --------------------- Package ---------------------
-rule EPackage2Json {
-	from
-		package: Ecore!EPackage (
-			package.eSuperPackage -> oclIsUndefined()
-		)
-	to
-		object: Json!Object (
-			key <- Sequence{if not package.name -> oclIsUndefined() then
-						thisModule -> ENamedElementNameKey(package)
-					else
-						OclUndefined
-					endif,
-						if not package.nsURI -> oclIsUndefined() then
-						thisModule -> EPackageNsURIKey(package)
-					else
-						OclUndefined
-					endif,
-						if not package.nsPrefix -> oclIsUndefined() then
-						thisModule -> EPackagePrefixKey(package)
-					else
-						OclUndefined
-					endif,
-						if package.eClassifiers -> select(e | e.
-								oclIsTypeOf(Ecore!EClass)) -> flatten() -> notEmpty() then
-						thisModule -> EPackageClassesKey(package)
-					else
-						OclUndefined
-					endif,
-						if package.eClassifiers -> select(e | e.
-								oclIsTypeOf(Ecore!EDataType)) -> flatten() -> notEmpty()
-								then
-						thisModule -> EPackageDataTypesKey(package)
-					else
-						OclUndefined
-					endif,
-						if package.eClassifiers -> select(e | e.oclIsTypeOf(Ecore!EEnum))
-								-> flatten() -> notEmpty() then
-						thisModule -> EPackageEnumsKey(package)
-					else
-						OclUndefined
-					endif,
-						if package.eSubpackages -> notEmpty() then
-						thisModule -> EPackageSubPackagesKey(package)
-					else
-						OclUndefined
-					endif,
-						if package.eAnnotations -> notEmpty() then
-						thisModule -> EModelElementAnnotationsKey(package)
-					else
-						OclUndefined
-					endif}
-		)
-}
-
-lazy rule EPackageSubPackage {
+lazy rule EPackage2Json {
 	from
 		package: Ecore!EPackage
 	to
@@ -305,7 +289,7 @@ lazy rule EPackageSubPackagesKey {
 		),
 		subPackagesArray: Json!Array (
 			content <- package.eSubpackages -> collect(e | thisModule ->
-					EPackageSubPackage(e)) -> flatten()
+					EPackage2Json(e)) -> flatten()
 		)
 }
 

@@ -38,9 +38,9 @@
 </mapAttribute>
 <mapAttribute key="Path">
 <mapEntry key="Ecore" value="#EMF"/>
-<mapEntry key="IN" value="/Ecore2Json/model/Bugzilla.ecore"/>
-<mapEntry key="Json" value="/Ecore2Json/model/json.ecore"/>
-<mapEntry key="OUT" value="/Ecore2Json/model/Output.xmi"/>
+<mapEntry key="IN" value="/Ecore2Json/src/Bugzilla.ecore"/>
+<mapEntry key="Json" value="/Ecore2Json/src/json.ecore"/>
+<mapEntry key="OUT" value="/Ecore2Json/src/Output.xmi"/>
 </mapAttribute>
 <listAttribute key="Superimpose"/>
 </launchConfiguration>
