@@ -38,7 +38,7 @@
 </mapAttribute>
 <mapAttribute key="Path">
 <mapEntry key="Ecore" value="#EMF"/>
-<mapEntry key="IN" value="/Ecore2Json/src/Bugzilla.ecore"/>
+<mapEntry key="IN" value="/Ecore2Json/src/json.ecore"/>
 <mapEntry key="Json" value="/Ecore2Json/src/json.ecore"/>
 <mapEntry key="OUT" value="/Ecore2Json/src/Output.xmi"/>
 </mapAttribute>
